@@ -18,16 +18,16 @@ namespace testGits.Controller
         {
             _service = service;
         }
-        [HttpPost("soal1")]
-        public List<char> Soal1(InputSoal1 input)
+        [HttpPost("soal2")]
+        public List<char> Soal1(InputSoal input)
         {
             return _service.Reveresed(input.input1);
         }
 
 
         [HttpPost]
-        [Route("soal2")]
-        public int Soal2(InputSoal1 input)
+        [Route("soal1")]
+        public int Soal2(InputSoal input)
         {
             return _service.ConsecutiveOnes(input.input2.ToList());
         }
